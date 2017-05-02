@@ -6,7 +6,7 @@ Oracle Client Version : 9.2.0.1.0
 Source Server         : localhost_1521_ORCL
 Source Server Version : 90200
 Source Host           : localhost:1521
-Source Schema         : system
+Source Schema         : calidus
 
 Target Server Type    : ORACLE
 Target Server Version : 90200
@@ -17,10 +17,10 @@ Date: 2011-06-15 11:42:31
 
 
 -- ----------------------------
--- Table structure for "system"."AMT_COUPON_MASTER"
+-- Table structure for "calidus"."AMT_COUPON_MASTER"
 -- ----------------------------
-DROP TABLE "system"."AMT_COUPON_MASTER";
-CREATE TABLE "system"."AMT_COUPON_MASTER" (
+DROP TABLE "calidus"."AMT_COUPON_MASTER";
+CREATE TABLE "calidus"."AMT_COUPON_MASTER" (
 "SEQ_MASTER" NUMBER(20) NULL ,
 "ACCOUNTID" VARCHAR2(300 BYTE) NULL ,
 "CHARID" VARCHAR2(300 BYTE) NULL ,
@@ -44,9 +44,9 @@ NOCACHE
 -- ----------------------------
 
 -- ----------------------------
--- Primary Key structure for table "system"."AMT_COUPON_MASTER"
+-- Primary Key structure for table "calidus"."AMT_COUPON_MASTER"
 -- ----------------------------
-ALTER TABLE "system"."AMT_COUPON_MASTER" ADD PRIMARY KEY ("ID");
+ALTER TABLE "calidus"."AMT_COUPON_MASTER" ADD PRIMARY KEY ("ID");
 =======
 /*
 Navicat Oracle Data Transfer
@@ -55,7 +55,7 @@ Oracle Client Version : 9.2.0.1.0
 Source Server         : localhost_1521_ORCL
 Source Server Version : 90200
 Source Host           : localhost:1521
-Source Schema         : system
+Source Schema         : calidus
 
 Target Server Type    : ORACLE
 Target Server Version : 90200
@@ -66,10 +66,10 @@ Date: 2011-06-15 11:42:31
 
 
 -- ----------------------------
--- Table structure for "system"."AMT_COUPON_MASTER"
+-- Table structure for "calidus"."AMT_COUPON_MASTER"
 -- ----------------------------
-DROP TABLE "system"."AMT_COUPON_MASTER";
-CREATE TABLE "system"."AMT_COUPON_MASTER" (
+DROP TABLE "calidus"."AMT_COUPON_MASTER";
+CREATE TABLE "calidus"."AMT_COUPON_MASTER" (
 "SEQ_MASTER" NUMBER(20) NULL ,
 "ACCOUNTID" VARCHAR2(300 BYTE) NULL ,
 "CHARID" VARCHAR2(300 BYTE) NULL ,
@@ -93,7 +93,7 @@ NOCACHE
 -- ----------------------------
 
 -- ----------------------------
--- Primary Key structure for table "system"."AMT_COUPON_MASTER"
+-- Primary Key structure for table "calidus"."AMT_COUPON_MASTER"
 -- ----------------------------
-ALTER TABLE "system"."AMT_COUPON_MASTER" ADD PRIMARY KEY ("ID");
+ALTER TABLE "calidus"."AMT_COUPON_MASTER" ADD PRIMARY KEY ("ID");
 >>>>>>> origin/master

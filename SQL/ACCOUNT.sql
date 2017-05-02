@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 --------------------------------------------
--- Export file for user system              --
+-- Export file for user calidus              --
 -- Created by serena on 2010-1-2, 5:01:44 --
 --------------------------------------------
 
@@ -10,14 +10,14 @@ prompt
 prompt Creating table ACCOUNTWORLD
 prompt ===========================
 prompt
-create table system.ACCOUNTWORLD
+create table calidus.ACCOUNTWORLD
 (
   ACCOUNTID VARCHAR2(32),
   WORLD     VARCHAR2(20),
   BANKMONEY NUMBER(20),
   BANKSIZE  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -28,8 +28,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.ACCOUNTWORLD_PK on system.ACCOUNTWORLD (ACCOUNTID, WORLD)
-  tablespace SYSTEM
+create unique index calidus.ACCOUNTWORLD_PK on calidus.ACCOUNTWORLD (ACCOUNTID, WORLD)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -44,7 +44,7 @@ prompt
 prompt Creating table ALT_CASHITEM
 prompt ===========================
 prompt
-create table system.ALT_CASHITEM
+create table calidus.ALT_CASHITEM
 (
   ACTCODE      VARCHAR2(10),
   WDATE        DATE,
@@ -69,7 +69,7 @@ create table system.ALT_CASHITEM
   EXPIREDATE   DATE,
   DESCR        VARCHAR2(64)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -85,7 +85,7 @@ prompt
 prompt Creating table ALT_ETC
 prompt ======================
 prompt
-create table system.ALT_ETC
+create table calidus.ALT_ETC
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -103,7 +103,7 @@ create table system.ALT_ETC
   GHELD      NUMBER(10),
   CHARID2    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -119,7 +119,7 @@ prompt
 prompt Creating table ALT_GHELD
 prompt ========================
 prompt
-create table system.ALT_GHELD
+create table calidus.ALT_GHELD
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -134,7 +134,7 @@ create table system.ALT_GHELD
   GHELD      NUMBER(10),
   CHARID2    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -150,7 +150,7 @@ prompt
 prompt Creating table ALT_ITEM
 prompt =======================
 prompt
-create table system.ALT_ITEM
+create table calidus.ALT_ITEM
 (
   ACTCODE      VARCHAR2(10),
   WDATE        DATE,
@@ -175,7 +175,7 @@ create table system.ALT_ITEM
   EXPIREDATE   DATE,
   DESCR        VARCHAR2(64)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -191,7 +191,7 @@ prompt
 prompt Creating table ALT_PLAY
 prompt =======================
 prompt
-create table system.ALT_PLAY
+create table calidus.ALT_PLAY
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -211,7 +211,7 @@ create table system.ALT_PLAY
   DEADBYPC   NUMBER(10),
   DEADBYMON  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -227,12 +227,12 @@ prompt
 prompt Creating table AMT_ACCOUNT
 prompt ==========================
 prompt
-create table system.AMT_ACCOUNT
+create table calidus.AMT_ACCOUNT
 (
   ACCOUNTID VARCHAR2(32),
   PASSWORD  VARCHAR2(8)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -243,8 +243,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_ACCOUNTPK on system.AMT_ACCOUNT (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.AMT_ACCOUNTPK on calidus.AMT_ACCOUNT (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -259,7 +259,7 @@ prompt
 prompt Creating table AMT_ACCOUNTLOG
 prompt =============================
 prompt
-create table system.AMT_ACCOUNTLOG
+create table calidus.AMT_ACCOUNTLOG
 (
   ACCOUNT_SEQID NUMBER(10) not null,
   ACCOUNT_ID    VARCHAR2(32) not null,
@@ -268,7 +268,7 @@ create table system.AMT_ACCOUNTLOG
   LOG_DATE      DATE not null,
   IP            VARCHAR2(23) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -279,8 +279,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX on system.AMT_ACCOUNTLOG (ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX on calidus.AMT_ACCOUNTLOG (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -290,8 +290,8 @@ create index system.AMT_ACCOUNTLOG_IX on system.AMT_ACCOUNTLOG (ACCOUNT_ID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX1 on system.AMT_ACCOUNTLOG (LOG_DATE, ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX1 on calidus.AMT_ACCOUNTLOG (LOG_DATE, ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -301,8 +301,8 @@ create index system.AMT_ACCOUNTLOG_IX1 on system.AMT_ACCOUNTLOG (LOG_DATE, ACCOU
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX2 on system.AMT_ACCOUNTLOG (LOG_TYPE)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX2 on calidus.AMT_ACCOUNTLOG (LOG_TYPE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -317,7 +317,7 @@ prompt
 prompt Creating table AMT_MASTER
 prompt =========================
 prompt
-create table system.AMT_MASTER
+create table calidus.AMT_MASTER
 (
   ACCOUNTID      VARCHAR2(32) not null,
   EMAIL          VARCHAR2(128) not null,
@@ -342,7 +342,7 @@ create table system.AMT_MASTER
   LONEY_CHARGEYN CHAR(1),
   SEX            CHAR(1)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -353,8 +353,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_IX on system.AMT_MASTER (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_IX on calidus.AMT_MASTER (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -364,8 +364,8 @@ create unique index system.AMT_MASTER_IX on system.AMT_MASTER (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_MASTER_IX1 on system.AMT_MASTER (SOCIALNO)
-  tablespace SYSTEM
+create index calidus.AMT_MASTER_IX1 on calidus.AMT_MASTER (SOCIALNO)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -375,8 +375,8 @@ create index system.AMT_MASTER_IX1 on system.AMT_MASTER (SOCIALNO)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_MASTER_IX2 on system.AMT_MASTER (EMAIL)
-  tablespace SYSTEM
+create index calidus.AMT_MASTER_IX2 on calidus.AMT_MASTER (EMAIL)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -391,7 +391,7 @@ prompt
 prompt Creating table AMT_MASTER_OUT
 prompt =============================
 prompt
-create table system.AMT_MASTER_OUT
+create table calidus.AMT_MASTER_OUT
 (
   ACCOUNT_SEQID NUMBER(10) not null,
   ACCOUNT_ID    VARCHAR2(32) not null,
@@ -417,7 +417,7 @@ create table system.AMT_MASTER_OUT
   PENALTY_GBN   VARCHAR2(2),
   PAUSE_DATE    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -428,8 +428,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX on system.AMT_MASTER_OUT (ACCOUNT_SEQID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX on calidus.AMT_MASTER_OUT (ACCOUNT_SEQID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -439,8 +439,8 @@ create unique index system.AMT_MASTER_OUT_IX on system.AMT_MASTER_OUT (ACCOUNT_S
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX1 on system.AMT_MASTER_OUT (ACCOUNT_ID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX1 on calidus.AMT_MASTER_OUT (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -450,8 +450,8 @@ create unique index system.AMT_MASTER_OUT_IX1 on system.AMT_MASTER_OUT (ACCOUNT_
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX2 on system.AMT_MASTER_OUT (NICKNAME)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX2 on calidus.AMT_MASTER_OUT (NICKNAME)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -466,7 +466,7 @@ prompt
 prompt Creating table AMT_WITHDRAW
 prompt ===========================
 prompt
-create table system.AMT_WITHDRAW
+create table calidus.AMT_WITHDRAW
 (
   ACCOUNT_SEQID   NUMBER(10) not null,
   ACCOUNT_ID      VARCHAR2(32) not null,
@@ -479,7 +479,7 @@ create table system.AMT_WITHDRAW
   REFUND_YN       CHAR(1),
   REFUND_COINAMT  NUMBER(22)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -490,8 +490,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX on system.AMT_WITHDRAW (ACCOUNT_SEQID)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX on calidus.AMT_WITHDRAW (ACCOUNT_SEQID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -501,8 +501,8 @@ create index system.AMT_WITHDRAW_IX on system.AMT_WITHDRAW (ACCOUNT_SEQID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX1 on system.AMT_WITHDRAW (ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX1 on calidus.AMT_WITHDRAW (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -512,8 +512,8 @@ create index system.AMT_WITHDRAW_IX1 on system.AMT_WITHDRAW (ACCOUNT_ID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX2 on system.AMT_WITHDRAW (WITHDRAW_DATE, WITHDRAW_REASON)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX2 on calidus.AMT_WITHDRAW (WITHDRAW_DATE, WITHDRAW_REASON)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -523,8 +523,8 @@ create index system.AMT_WITHDRAW_IX2 on system.AMT_WITHDRAW (WITHDRAW_DATE, WITH
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX3 on system.AMT_WITHDRAW (WITHDRAW_TYPE)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX3 on calidus.AMT_WITHDRAW (WITHDRAW_TYPE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -539,7 +539,7 @@ prompt
 prompt Creating table AMT_WORLDMAPPING
 prompt ===============================
 prompt
-create table system.AMT_WORLDMAPPING
+create table calidus.AMT_WORLDMAPPING
 (
   ACCOUNTID    VARCHAR2(32) not null,
   SECTION      VARCHAR2(10) not null,
@@ -547,7 +547,7 @@ create table system.AMT_WORLDMAPPING
   CHARID       VARCHAR2(16) not null,
   CREATIONDATE DATE not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -558,8 +558,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WORLDMAPPING_IX on system.AMT_WORLDMAPPING (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.AMT_WORLDMAPPING_IX on calidus.AMT_WORLDMAPPING (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -574,7 +574,7 @@ prompt
 prompt Creating table AMT_ZIPCODE
 prompt ==========================
 prompt
-create table system.AMT_ZIPCODE
+create table calidus.AMT_ZIPCODE
 (
   ZIP1  CHAR(3) not null,
   ZIP2  CHAR(3) not null,
@@ -582,7 +582,7 @@ create table system.AMT_ZIPCODE
   BUNJI VARCHAR2(100),
   SADDR VARCHAR2(40) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -598,7 +598,7 @@ prompt
 prompt Creating table BAKCHARCASHITEM
 prompt ==============================
 prompt
-create table system.BAKCHARCASHITEM
+create table calidus.BAKCHARCASHITEM
 (
   ITEMSEQ    NUMBER(20),
   CHARSEQ    NUMBER(20),
@@ -623,7 +623,7 @@ create table system.BAKCHARCASHITEM
   REASON     VARCHAR2(32),
   DELTIME    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -634,8 +634,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARCASHITEM_PK1 on system.BAKCHARCASHITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARCASHITEM_PK1 on calidus.BAKCHARCASHITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -645,8 +645,8 @@ create unique index system.BAKCHARCASHITEM_PK1 on system.BAKCHARCASHITEM (ITEMSE
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARCASHITEM_PK2 on system.BAKCHARCASHITEM (CHARSEQ, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARCASHITEM_PK2 on calidus.BAKCHARCASHITEM (CHARSEQ, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -661,7 +661,7 @@ prompt
 prompt Creating table BAKCHARDETAIL
 prompt ============================
 prompt
-create table system.BAKCHARDETAIL
+create table calidus.BAKCHARDETAIL
 (
   CHARSEQ        NUMBER(20),
   CHARID         VARCHAR2(32),
@@ -692,7 +692,7 @@ create table system.BAKCHARDETAIL
   FACE           NUMBER(10),
   DEADTYPE       NUMBER(3)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -703,8 +703,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARDETAIL_IX1 on system.BAKCHARDETAIL (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARDETAIL_IX1 on calidus.BAKCHARDETAIL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -714,8 +714,8 @@ create index system.BAKCHARDETAIL_IX1 on system.BAKCHARDETAIL (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARDETAIL_PK on system.BAKCHARDETAIL (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARDETAIL_PK on calidus.BAKCHARDETAIL (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -730,7 +730,7 @@ prompt
 prompt Creating table BAKCHARITEM
 prompt ==========================
 prompt
-create table system.BAKCHARITEM
+create table calidus.BAKCHARITEM
 (
   ITEMSEQ    NUMBER(20),
   CHARSEQ    NUMBER(20),
@@ -755,7 +755,7 @@ create table system.BAKCHARITEM
   REASON     VARCHAR2(32),
   DELTIME    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -766,8 +766,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARITEM_PK1 on system.BAKCHARITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARITEM_PK1 on calidus.BAKCHARITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -777,8 +777,8 @@ create unique index system.BAKCHARITEM_PK1 on system.BAKCHARITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARITEM_PK2 on system.BAKCHARITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARITEM_PK2 on calidus.BAKCHARITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -793,7 +793,7 @@ prompt
 prompt Creating table BAKCHARMASTER
 prompt ============================
 prompt
-create table system.BAKCHARMASTER
+create table calidus.BAKCHARMASTER
 (
   CHARSEQ      NUMBER(20),
   CHARID       VARCHAR2(32),
@@ -804,7 +804,7 @@ create table system.BAKCHARMASTER
   CREATIONDATE DATE,
   DELETIONDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -815,8 +815,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARMASTER_IX1 on system.BAKCHARMASTER (ACCOUNTID, CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARMASTER_IX1 on calidus.BAKCHARMASTER (ACCOUNTID, CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -826,8 +826,8 @@ create index system.BAKCHARMASTER_IX1 on system.BAKCHARMASTER (ACCOUNTID, CHARID
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARMASTER_IX2 on system.BAKCHARMASTER (CREATIONDATE)
-  tablespace SYSTEM
+create index calidus.BAKCHARMASTER_IX2 on calidus.BAKCHARMASTER (CREATIONDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -837,8 +837,8 @@ create index system.BAKCHARMASTER_IX2 on system.BAKCHARMASTER (CREATIONDATE)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARMASTER_PK on system.BAKCHARMASTER (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARMASTER_PK on calidus.BAKCHARMASTER (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -853,14 +853,14 @@ prompt
 prompt Creating table BAKCHARSKILL
 prompt ===========================
 prompt
-create table system.BAKCHARSKILL
+create table calidus.BAKCHARSKILL
 (
   CHARSEQ  NUMBER(20),
   CHARID   VARCHAR2(32),
   SKILLSEQ VARCHAR2(512),
   PRODUCT  VARCHAR2(512)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -871,8 +871,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARSKILL_IX1 on system.BAKCHARSKILL (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARSKILL_IX1 on calidus.BAKCHARSKILL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -882,8 +882,8 @@ create index system.BAKCHARSKILL_IX1 on system.BAKCHARSKILL (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARSKILL_PK on system.BAKCHARSKILL (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARSKILL_PK on calidus.BAKCHARSKILL (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -898,7 +898,7 @@ prompt
 prompt Creating table BAKSALESBOARD
 prompt ============================
 prompt
-create table system.BAKSALESBOARD
+create table calidus.BAKSALESBOARD
 (
   DOCID     NUMBER(20),
   CHARID    VARCHAR2(32),
@@ -909,7 +909,7 @@ create table system.BAKSALESBOARD
   ITEMTID   NUMBER(10),
   STATUS    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -920,8 +920,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKSALESBOARD_IX1 on system.BAKSALESBOARD (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKSALESBOARD_IX1 on calidus.BAKSALESBOARD (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -931,8 +931,8 @@ create index system.BAKSALESBOARD_IX1 on system.BAKSALESBOARD (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKSALESBOARD_PK on system.BAKSALESBOARD (DOCID)
-  tablespace SYSTEM
+create unique index calidus.BAKSALESBOARD_PK on calidus.BAKSALESBOARD (DOCID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -947,7 +947,7 @@ prompt
 prompt Creating table CASHITEMBUYLIST
 prompt ==============================
 prompt
-create table system.CASHITEMBUYLIST
+create table calidus.CASHITEMBUYLIST
 (
   BUYSEQ    NUMBER(20),
   ACCOUNTID VARCHAR2(32),
@@ -964,7 +964,7 @@ create table system.CASHITEMBUYLIST
   ORDERID   VARCHAR2(32),
   STATUS    VARCHAR2(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -975,8 +975,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CASHITEMBUYLIST_IX1 on system.CASHITEMBUYLIST (BUYSEQ)
-  tablespace SYSTEM
+create unique index calidus.CASHITEMBUYLIST_IX1 on calidus.CASHITEMBUYLIST (BUYSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -986,8 +986,8 @@ create unique index system.CASHITEMBUYLIST_IX1 on system.CASHITEMBUYLIST (BUYSEQ
     minextents 1
     maxextents unlimited
   );
-create unique index system.CASHITEMBUYLIST_IX2 on system.CASHITEMBUYLIST (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CASHITEMBUYLIST_IX2 on calidus.CASHITEMBUYLIST (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -997,8 +997,8 @@ create unique index system.CASHITEMBUYLIST_IX2 on system.CASHITEMBUYLIST (ITEMSE
     minextents 1
     maxextents unlimited
   );
-create index system.CASHITEMBUYLIST_IX3 on system.CASHITEMBUYLIST (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CASHITEMBUYLIST_IX3 on calidus.CASHITEMBUYLIST (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1008,8 +1008,8 @@ create index system.CASHITEMBUYLIST_IX3 on system.CASHITEMBUYLIST (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.CASHITEMBUYLIST_IX4 on system.CASHITEMBUYLIST (CHARID)
-  tablespace SYSTEM
+create index calidus.CASHITEMBUYLIST_IX4 on calidus.CASHITEMBUYLIST (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1024,13 +1024,13 @@ prompt
 prompt Creating table CHARBUDDY
 prompt ========================
 prompt
-create table system.CHARBUDDY
+create table calidus.CHARBUDDY
 (
   CHARID  VARCHAR2(32),
   BUDDYID VARCHAR2(32),
   FLAG    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1041,8 +1041,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARBUDDY_IX1 on system.CHARBUDDY (CHARID)
-  tablespace SYSTEM
+create index calidus.CHARBUDDY_IX1 on calidus.CHARBUDDY (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1057,7 +1057,7 @@ prompt
 prompt Creating table CHARCASHITEM
 prompt ===========================
 prompt
-create table system.CHARCASHITEM
+create table calidus.CHARCASHITEM
 (
   ITEMSEQ    NUMBER(20),
   ACCOUNTID  VARCHAR2(32),
@@ -1079,7 +1079,7 @@ create table system.CHARCASHITEM
   REMAINTIME NUMBER(10),
   EXPIREDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1090,8 +1090,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CAHRCASHITEM_PK1 on system.CHARCASHITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CAHRCASHITEM_PK1 on calidus.CHARCASHITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1101,8 +1101,8 @@ create unique index system.CAHRCASHITEM_PK1 on system.CHARCASHITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARCASHITEM_IX1 on system.CHARCASHITEM (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARCASHITEM_IX1 on calidus.CHARCASHITEM (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1112,8 +1112,8 @@ create index system.CHARCASHITEM_IX1 on system.CHARCASHITEM (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARCASHITEM_PK2 on system.CHARCASHITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CHARCASHITEM_PK2 on calidus.CHARCASHITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1128,7 +1128,7 @@ prompt
 prompt Creating table CHARDETAIL
 prompt =========================
 prompt
-create table system.CHARDETAIL
+create table calidus.CHARDETAIL
 (
   CHARID         VARCHAR2(32),
   TITLE          VARCHAR2(32),
@@ -1158,7 +1158,7 @@ create table system.CHARDETAIL
   FACE           NUMBER(10),
   DEADTYPE       NUMBER(3)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1169,8 +1169,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARDETAIL_PK on system.CHARDETAIL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARDETAIL_PK on calidus.CHARDETAIL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1185,7 +1185,7 @@ prompt
 prompt Creating table CHARITEM
 prompt =======================
 prompt
-create table system.CHARITEM
+create table calidus.CHARITEM
 (
   ITEMSEQ    NUMBER(20),
   ACCOUNTID  VARCHAR2(32),
@@ -1207,7 +1207,7 @@ create table system.CHARITEM
   REMAINTIME NUMBER(10),
   EXPIREDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1218,8 +1218,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CAHRITEM_PK on system.CHARITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CAHRITEM_PK on calidus.CHARITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1229,8 +1229,8 @@ create unique index system.CAHRITEM_PK on system.CHARITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARITEM_IX1 on system.CHARITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create index calidus.CHARITEM_IX1 on calidus.CHARITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1240,8 +1240,8 @@ create index system.CHARITEM_IX1 on system.CHARITEM (CHARID, ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARITEM_IX2 on system.CHARITEM (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARITEM_IX2 on calidus.CHARITEM (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1256,7 +1256,7 @@ prompt
 prompt Creating table CHARMASTER
 prompt =========================
 prompt
-create table system.CHARMASTER
+create table calidus.CHARMASTER
 (
   CHARID       VARCHAR2(32),
   OLDCHARID    VARCHAR2(32),
@@ -1266,7 +1266,7 @@ create table system.CHARMASTER
   CHARTID      NUMBER(10),
   CREATIONDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1277,8 +1277,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX1 on system.CHARMASTER (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX1 on calidus.CHARMASTER (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1288,8 +1288,8 @@ create index system.CHARMASTER_IX1 on system.CHARMASTER (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX2 on system.CHARMASTER (CREATIONDATE)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX2 on calidus.CHARMASTER (CREATIONDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1299,8 +1299,8 @@ create index system.CHARMASTER_IX2 on system.CHARMASTER (CREATIONDATE)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX3 on system.CHARMASTER (OLDCHARID)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX3 on calidus.CHARMASTER (OLDCHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1310,8 +1310,8 @@ create index system.CHARMASTER_IX3 on system.CHARMASTER (OLDCHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARMASTER_PK on system.CHARMASTER (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARMASTER_PK on calidus.CHARMASTER (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1326,7 +1326,7 @@ prompt
 prompt Creating table CHARQUEST
 prompt ========================
 prompt
-create table system.CHARQUEST
+create table calidus.CHARQUEST
 (
   CHARID   VARCHAR2(32),
   QUESTTID NUMBER(10),
@@ -1335,7 +1335,7 @@ create table system.CHARQUEST
   ARG2     NUMBER(10),
   NPCID    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1346,8 +1346,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARQUEST_IX1 on system.CHARQUEST (QUESTTID)
-  tablespace SYSTEM
+create index calidus.CHARQUEST_IX1 on calidus.CHARQUEST (QUESTTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1357,8 +1357,8 @@ create index system.CHARQUEST_IX1 on system.CHARQUEST (QUESTTID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARQUEST_PK on system.CHARQUEST (CHARID, QUESTTID)
-  tablespace SYSTEM
+create unique index calidus.CHARQUEST_PK on calidus.CHARQUEST (CHARID, QUESTTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1373,13 +1373,13 @@ prompt
 prompt Creating table CHARSKILL
 prompt ========================
 prompt
-create table system.CHARSKILL
+create table calidus.CHARSKILL
 (
   CHARID   VARCHAR2(32),
   SKILLSEQ VARCHAR2(512),
   PRODUCT  VARCHAR2(512)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1390,8 +1390,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARSKILL_PK on system.CHARSKILL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARSKILL_PK on calidus.CHARSKILL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1406,7 +1406,7 @@ prompt
 prompt Creating table GUILDBATTLEHIST
 prompt ==============================
 prompt
-create table system.GUILDBATTLEHIST
+create table calidus.GUILDBATTLEHIST
 (
   GUILDID        VARCHAR2(32),
   ENEMYGUILDID   VARCHAR2(32),
@@ -1416,7 +1416,7 @@ create table system.GUILDBATTLEHIST
   SCORE          NUMBER(10),
   ENEMYSCORE     NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1427,8 +1427,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.GUILDBATTLEHIST_IX1 on system.GUILDBATTLEHIST (GUILDID, BATTLESTDATE)
-  tablespace SYSTEM
+create index calidus.GUILDBATTLEHIST_IX1 on calidus.GUILDBATTLEHIST (GUILDID, BATTLESTDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1443,7 +1443,7 @@ prompt
 prompt Creating table GUILDMASTER
 prompt ==========================
 prompt
-create table system.GUILDMASTER
+create table calidus.GUILDMASTER
 (
   GUILDID        VARCHAR2(32),
   GUILDTID       NUMBER(10),
@@ -1463,7 +1463,7 @@ create table system.GUILDMASTER
   MARKID         NUMBER(10),
   COLORID        NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1474,8 +1474,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.GUILDMASTER_PK on system.GUILDMASTER (GUILDID)
-  tablespace SYSTEM
+create unique index calidus.GUILDMASTER_PK on calidus.GUILDMASTER (GUILDID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1490,14 +1490,14 @@ prompt
 prompt Creating table GUILDMEMBER
 prompt ==========================
 prompt
-create table system.GUILDMEMBER
+create table calidus.GUILDMEMBER
 (
   CHARID     VARCHAR2(32),
   GUILDID    VARCHAR2(32),
   MEMBERRANK NUMBER(5),
   JOINDATE   DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1508,8 +1508,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.GUILDMEMBER_IX1 on system.GUILDMEMBER (GUILDID)
-  tablespace SYSTEM
+create index calidus.GUILDMEMBER_IX1 on calidus.GUILDMEMBER (GUILDID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1519,8 +1519,8 @@ create index system.GUILDMEMBER_IX1 on system.GUILDMEMBER (GUILDID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.GUILDMEMBER_PK on system.GUILDMEMBER (CHARID)
-  tablespace SYSTEM
+create unique index calidus.GUILDMEMBER_PK on calidus.GUILDMEMBER (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1535,7 +1535,7 @@ prompt
 prompt Creating table LOGINSTATUS
 prompt ==========================
 prompt
-create table system.LOGINSTATUS
+create table calidus.LOGINSTATUS
 (
   ACCOUNTID  VARCHAR2(20),
   STATUS     NUMBER(3),
@@ -1548,7 +1548,7 @@ create table system.LOGINSTATUS
   LASTCHARID VARCHAR2(16),
   ACCESSDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1559,8 +1559,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.LOGINSTATUS_PK on system.LOGINSTATUS (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.LOGINSTATUS_PK on calidus.LOGINSTATUS (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1575,7 +1575,7 @@ prompt
 prompt Creating table MAILBOX
 prompt ======================
 prompt
-create table system.MAILBOX
+create table calidus.MAILBOX
 (
   MAILSEQ    NUMBER(20),
   TOCHARID   VARCHAR2(32),
@@ -1588,7 +1588,7 @@ create table system.MAILBOX
   ITEMTID    NUMBER(10),
   ITEMQTY    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1599,8 +1599,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_IX1 on system.MAILBOX (TOCHARID, WDATE DESC)
-  tablespace SYSTEM
+create index calidus.MAILBOX_IX1 on calidus.MAILBOX (TOCHARID, WDATE DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1610,8 +1610,8 @@ create index system.MAILBOX_IX1 on system.MAILBOX (TOCHARID, WDATE DESC)
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_IX2 on system.MAILBOX (FROMCHARID, WDATE DESC)
-  tablespace SYSTEM
+create index calidus.MAILBOX_IX2 on calidus.MAILBOX (FROMCHARID, WDATE DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1621,8 +1621,8 @@ create index system.MAILBOX_IX2 on system.MAILBOX (FROMCHARID, WDATE DESC)
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_PK on system.MAILBOX (MAILSEQ)
-  tablespace SYSTEM
+create index calidus.MAILBOX_PK on calidus.MAILBOX (MAILSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1637,7 +1637,7 @@ prompt
 prompt Creating table MD_GROUP_PRIVILEGES
 prompt ==================================
 prompt
-create table system.MD_GROUP_PRIVILEGES
+create table calidus.MD_GROUP_PRIVILEGES
 (
   ID                INTEGER not null,
   GROUP_ID_FK       INTEGER not null,
@@ -1648,7 +1648,7 @@ create table system.MD_GROUP_PRIVILEGES
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1664,7 +1664,7 @@ prompt
 prompt Creating table MD_MIGR_DEPENDENCY
 prompt =================================
 prompt
-create table system.MD_MIGR_DEPENDENCY
+create table calidus.MD_MIGR_DEPENDENCY
 (
   ID                 INTEGER not null,
   CONNECTION_ID_FK   INTEGER not null,
@@ -1678,7 +1678,7 @@ create table system.MD_MIGR_DEPENDENCY
   LAST_UPDATED_ON    DATE,
   LAST_UPDATED_BY    VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1694,7 +1694,7 @@ prompt
 prompt Creating table MD_MIGR_PARAMETER
 prompt ================================
 prompt
-create table system.MD_MIGR_PARAMETER
+create table calidus.MD_MIGR_PARAMETER
 (
   ID                INTEGER not null,
   CONNECTION_ID_FK  INTEGER not null,
@@ -1715,7 +1715,7 @@ create table system.MD_MIGR_PARAMETER
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1731,7 +1731,7 @@ prompt
 prompt Creating table MD_MIGR_WEAKDEP
 prompt ==============================
 prompt
-create table system.MD_MIGR_WEAKDEP
+create table calidus.MD_MIGR_WEAKDEP
 (
   ID                INTEGER not null,
   CONNECTION_ID_FK  INTEGER not null,
@@ -1746,7 +1746,7 @@ create table system.MD_MIGR_WEAKDEP
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1762,12 +1762,12 @@ prompt
 prompt Creating table MD_REGISTRY
 prompt ==========================
 prompt
-create table system.MD_REGISTRY
+create table calidus.MD_REGISTRY
 (
   OBJECT_TYPE VARCHAR2(30) not null,
   OBJECT_NAME VARCHAR2(30) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1783,7 +1783,7 @@ prompt
 prompt Creating table MD_USER_PRIVILEGES
 prompt =================================
 prompt
-create table system.MD_USER_PRIVILEGES
+create table calidus.MD_USER_PRIVILEGES
 (
   ID                INTEGER not null,
   USER_ID_FK        INTEGER not null,
@@ -1794,7 +1794,7 @@ create table system.MD_USER_PRIVILEGES
   LAST_UPDATED_ON   DATE,
   LAST_UDPATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1810,7 +1810,7 @@ prompt
 prompt Creating table MIGR_DATATYPE_TRANSFORM_MAP
 prompt ==========================================
 prompt
-create table system.MIGR_DATATYPE_TRANSFORM_MAP
+create table calidus.MIGR_DATATYPE_TRANSFORM_MAP
 (
   ID                INTEGER not null,
   PROJECT_ID_FK     INTEGER not null,
@@ -1821,7 +1821,7 @@ create table system.MIGR_DATATYPE_TRANSFORM_MAP
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1837,7 +1837,7 @@ prompt
 prompt Creating table MIGR_DATATYPE_TRANSFORM_RULE
 prompt ===========================================
 prompt
-create table system.MIGR_DATATYPE_TRANSFORM_RULE
+create table calidus.MIGR_DATATYPE_TRANSFORM_RULE
 (
   ID                    INTEGER not null,
   MAP_ID_FK             INTEGER not null,
@@ -1853,7 +1853,7 @@ create table system.MIGR_DATATYPE_TRANSFORM_RULE
   LAST_UPDATED_ON       DATE,
   LAST_UPDATED_BY       VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1869,7 +1869,7 @@ prompt
 prompt Creating table MIGR_GENERATION_ORDER
 prompt ====================================
 prompt
-create table system.MIGR_GENERATION_ORDER
+create table calidus.MIGR_GENERATION_ORDER
 (
   ID               INTEGER not null,
   CONNECTION_ID_FK INTEGER not null,
@@ -1877,7 +1877,7 @@ create table system.MIGR_GENERATION_ORDER
   OBJECT_TYPE      VARCHAR2(4000) not null,
   GENERATION_ORDER INTEGER not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1893,7 +1893,7 @@ prompt
 prompt Creating table RPGWT
 prompt ====================
 prompt
-create table system.RPGWT
+create table calidus.RPGWT
 (
   SERVERID VARCHAR2(16),
   CHARTID  NUMBER(10),
@@ -1901,7 +1901,7 @@ create table system.RPGWT
   CURCONN  NUMBER(10),
   MAXCONN  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1917,7 +1917,7 @@ prompt
 prompt Creating table SALESBOARD
 prompt =========================
 prompt
-create table system.SALESBOARD
+create table calidus.SALESBOARD
 (
   DOCID     NUMBER(20),
   CHARID    VARCHAR2(32),
@@ -1929,7 +1929,7 @@ create table system.SALESBOARD
   ITEMTID   NUMBER(10),
   STATUS    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -1940,8 +1940,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOARD_IX1 on system.SALESBOARD (ITEMTID, DOCID DESC)
-  tablespace SYSTEM
+create index calidus.SALESBOARD_IX1 on calidus.SALESBOARD (ITEMTID, DOCID DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1951,8 +1951,8 @@ create index system.SALESBOARD_IX1 on system.SALESBOARD (ITEMTID, DOCID DESC)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOARD_IX2 on system.SALESBOARD (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.SALESBOARD_IX2 on calidus.SALESBOARD (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1962,8 +1962,8 @@ create unique index system.SALESBOARD_IX2 on system.SALESBOARD (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOARD_IX3 on system.SALESBOARD (CHARID)
-  tablespace SYSTEM
+create index calidus.SALESBOARD_IX3 on calidus.SALESBOARD (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1973,8 +1973,8 @@ create index system.SALESBOARD_IX3 on system.SALESBOARD (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOARD_PK on system.SALESBOARD (DOCID)
-  tablespace SYSTEM
+create unique index calidus.SALESBOARD_PK on calidus.SALESBOARD (DOCID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -1989,7 +1989,7 @@ prompt
 prompt Creating table SALESBOUGHT
 prompt ==========================
 prompt
-create table system.SALESBOUGHT
+create table calidus.SALESBOUGHT
 (
   BUYID      NUMBER(20),
   DOCID      NUMBER(20),
@@ -1998,7 +1998,7 @@ create table system.SALESBOUGHT
   BUYDATE    DATE,
   BUYITEMSEQ NUMBER(20)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -2009,8 +2009,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOUGHT_IX1 on system.SALESBOUGHT (DOCID, BUYID)
-  tablespace SYSTEM
+create index calidus.SALESBOUGHT_IX1 on calidus.SALESBOUGHT (DOCID, BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -2020,8 +2020,8 @@ create index system.SALESBOUGHT_IX1 on system.SALESBOUGHT (DOCID, BUYID)
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOUGHT_IX2 on system.SALESBOUGHT (BUYCHARID, BUYID)
-  tablespace SYSTEM
+create index calidus.SALESBOUGHT_IX2 on calidus.SALESBOUGHT (BUYCHARID, BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -2031,8 +2031,8 @@ create index system.SALESBOUGHT_IX2 on system.SALESBOUGHT (BUYCHARID, BUYID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOUGHT_PK on system.SALESBOUGHT (BUYID)
-  tablespace SYSTEM
+create unique index calidus.SALESBOUGHT_PK on calidus.SALESBOUGHT (BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -2047,7 +2047,7 @@ prompt
 prompt Creating table SERVERCONFIG
 prompt ===========================
 prompt
-create table system.SERVERCONFIG
+create table calidus.SERVERCONFIG
 (
   SECTION     VARCHAR2(10),
   MODULEDATA1 VARCHAR2(32),
@@ -2065,7 +2065,7 @@ create table system.SERVERCONFIG
   DBVENDER    VARCHAR2(32),
   EXTRA       VARCHAR2(1000)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -2076,8 +2076,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.SERVERCONFIG_PK on system.SERVERCONFIG (SECTION)
-  tablespace SYSTEM
+create unique index calidus.SERVERCONFIG_PK on calidus.SERVERCONFIG (SECTION)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -2092,12 +2092,12 @@ prompt
 prompt Creating table SERVERWORLD
 prompt ==========================
 prompt
-create table system.SERVERWORLD
+create table calidus.SERVERWORLD
 (
   SECTION VARCHAR2(10),
   WORLD   VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -2113,12 +2113,12 @@ prompt
 prompt Creating table WANTEDCRIMINAL
 prompt =============================
 prompt
-create table system.WANTEDCRIMINAL
+create table calidus.WANTEDCRIMINAL
 (
   CHARID VARCHAR2(16),
   BOUNTY NUMBER(20)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -2129,8 +2129,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.WANTEDCRIMINAL_PK on system.WANTEDCRIMINAL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.WANTEDCRIMINAL_PK on calidus.WANTEDCRIMINAL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -2145,7 +2145,7 @@ prompt
 prompt Creating sequence AMT_MASTER_SQ
 prompt ===============================
 prompt
-create sequence system.AMT_MASTER_SQ
+create sequence calidus.AMT_MASTER_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 1
@@ -2156,7 +2156,7 @@ prompt
 prompt Creating sequence BAKCHARMASTERSQ
 prompt =================================
 prompt
-create sequence system.BAKCHARMASTERSQ
+create sequence calidus.BAKCHARMASTERSQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 8431
@@ -2167,7 +2167,7 @@ prompt
 prompt Creating sequence MAILBOXSQ
 prompt ===========================
 prompt
-create sequence system.MAILBOXSQ
+create sequence calidus.MAILBOXSQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 15901
@@ -2178,7 +2178,7 @@ prompt
 prompt Creating sequence SALESBOARD_SQ
 prompt ===============================
 prompt
-create sequence system.SALESBOARD_SQ
+create sequence calidus.SALESBOARD_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 231081
@@ -2189,7 +2189,7 @@ prompt
 prompt Creating sequence SALESBOUGHT_SQ
 prompt ================================
 prompt
-create sequence system.SALESBOUGHT_SQ
+create sequence calidus.SALESBOUGHT_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 1
@@ -2200,7 +2200,7 @@ prompt
 prompt Creating view V_ALT_ALL
 prompt =======================
 prompt
-CREATE OR REPLACE VIEW system.V_ALT_ALL AS
+CREATE OR REPLACE VIEW calidus.V_ALT_ALL AS
 SELECT
  ACTCODE, WDATE, IPADDR, ACCOUNTID, CHARID, CHARTID, CHARLV, CHAREXP, GHELDINVEN, GHELDBANK, /* COMMON */
  NULL AS ITEMSEQ, NULL AS ITEMTID , NULL AS ITEMQTY, NULL AS ITEMCONVHIST, NULL AS ITEMOPTION, NULL AS CHARID2,
@@ -2245,7 +2245,7 @@ prompt
 prompt Creating procedure SPDELETECHAR
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETECHAR(V_CHARID VARCHAR2, V_REASON VARCHAR2)
 AS
  V_BAKCHAR BAKCHARMASTER%ROWTYPE;
@@ -2350,7 +2350,7 @@ prompt
 prompt Creating procedure SPDELETEACCOUNT
 prompt ==================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEACCOUNT(V_ACCOUNTID VARCHAR2, V_REASON VARCHAR2, V_RESULT OUT VARCHAR2)
 AS
  V_CHARID VARCHAR2(32);
@@ -2388,7 +2388,7 @@ prompt
 prompt Creating procedure SPDELETECASHITEM
 prompt ===================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETECASHITEM(V_ITEMSEQ NUMBER, V_REASON VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -2416,7 +2416,7 @@ prompt
 prompt Creating procedure SPDELETEGUILD
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEGUILD(V_GUILDID VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -2446,7 +2446,7 @@ prompt
 prompt Creating procedure SPDELETEITEM
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEITEM(V_ITEMSEQ NUMBER, V_REASON VARCHAR2)
 AS
  V_ITEMSEQ_DUMMY  NUMBER;
@@ -2489,7 +2489,7 @@ prompt
 prompt Creating procedure SPMAILDELETE
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILDELETE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILDELETE(
  V_MAILSEQ NUMBER, V_FLAG NUMBER
  )
 AS
@@ -2507,7 +2507,7 @@ prompt
 prompt Creating procedure SPMAILITEMSAVE
 prompt =================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILITEMSAVE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILITEMSAVE(
  V_MAILSEQ NUMBER, V_ITEMSEQ NUMBER, V_ITEMTID NUMBER,
  V_ITEMQTY NUMBER, V_CHARID VARCHAR2, V_STATUS NUMBER,
  V_NEEDLEVEL OUT NUMBER, V_CONVERT OUT VARCHAR2, V_DURABILITY OUT NUMBER,
@@ -2613,7 +2613,7 @@ prompt
 prompt Creating procedure SPMAILWRITE
 prompt ==============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILWRITE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILWRITE(
  V_TOCHARID VARCHAR2, V_FROMCHARID VARCHAR2, V_SUBJECT VARCHAR2,
  V_DATE VARCHAR2, V_FLAG NUMBER, V_ITEMTID NUMBER,
  V_ITEMQTY NUMBER, V_ITEMSEQ NUMBER, V_STATUS NUMBER,
@@ -2689,7 +2689,7 @@ prompt
 prompt Creating procedure SPRENAMECHAR
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRENAMECHAR(V_CHARID_OLD VARCHAR2, V_CHARID_NEW VARCHAR2, V_CODE OUT NUMBER)
 AS
  V_DUP   VARCHAR2(5);
@@ -2763,7 +2763,7 @@ prompt
 prompt Creating procedure SPRENAMEGUILD
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRENAMEGUILD(V_GUILDID VARCHAR2, V_OLDGUILDID VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -2792,7 +2792,7 @@ prompt
 prompt Creating procedure SPRESTORECHAR
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRESTORECHAR(V_CHARSEQ NUMBER, V_NEWCHARID VARCHAR2, V_RESULT OUT VARCHAR2)
 AS
  V_CHARIDDUMMY VARCHAR2(32);
@@ -2948,7 +2948,7 @@ prompt
 prompt Creating procedure SPSALESBUY
 prompt =============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESBUY(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESBUY(
  V_DOCID NUMBER, V_BUYER VARCHAR2, V_BUYERMONEY NUMBER, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_SELLER OUT VARCHAR2, V_PRICE OUT NUMBER,
  V_ITEMSEQ OUT NUMBER, V_ITEMTID OUT NUMBER, V_ITEMQTY OUT NUMBER,
@@ -3056,7 +3056,7 @@ prompt
 prompt Creating procedure SPSALESCANCEL
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESCANCEL(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESCANCEL(
  V_DOCID NUMBER, V_CHARID VARCHAR2, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_CODE OUT NUMBER
  )
@@ -3102,7 +3102,7 @@ prompt
 prompt Creating procedure SPSALESCONFIRM
 prompt =================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESCONFIRM(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESCONFIRM(
  V_DOCID NUMBER, V_CHARID VARCHAR2, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_CODE OUT NUMBER
  )
@@ -3148,7 +3148,7 @@ prompt
 prompt Creating procedure SPSALESSELL
 prompt ==============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESSELL(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESSELL(
  V_ITEMSEQ NUMBER, V_PRICE NUMBER, V_QUANTITY NUMBER,
  V_ITEMSTATUS NUMBER, V_BOARDSTATUS NUMBER, V_CHARID VARCHAR2,
  V_DOCID OUT NUMBER, V_DATESTR OUT VARCHAR2, V_CODE OUT NUMBER
@@ -3196,7 +3196,7 @@ END;
 spool off
 =======
 --------------------------------------------
--- Export file for user system              --
+-- Export file for user calidus              --
 -- Created by serena on 2010-1-2, 5:01:44 --
 --------------------------------------------
 
@@ -3206,14 +3206,14 @@ prompt
 prompt Creating table ACCOUNTWORLD
 prompt ===========================
 prompt
-create table system.ACCOUNTWORLD
+create table calidus.ACCOUNTWORLD
 (
   ACCOUNTID VARCHAR2(32),
   WORLD     VARCHAR2(20),
   BANKMONEY NUMBER(20),
   BANKSIZE  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3224,8 +3224,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.ACCOUNTWORLD_PK on system.ACCOUNTWORLD (ACCOUNTID, WORLD)
-  tablespace SYSTEM
+create unique index calidus.ACCOUNTWORLD_PK on calidus.ACCOUNTWORLD (ACCOUNTID, WORLD)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3240,7 +3240,7 @@ prompt
 prompt Creating table ALT_CASHITEM
 prompt ===========================
 prompt
-create table system.ALT_CASHITEM
+create table calidus.ALT_CASHITEM
 (
   ACTCODE      VARCHAR2(10),
   WDATE        DATE,
@@ -3265,7 +3265,7 @@ create table system.ALT_CASHITEM
   EXPIREDATE   DATE,
   DESCR        VARCHAR2(64)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3281,7 +3281,7 @@ prompt
 prompt Creating table ALT_ETC
 prompt ======================
 prompt
-create table system.ALT_ETC
+create table calidus.ALT_ETC
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -3299,7 +3299,7 @@ create table system.ALT_ETC
   GHELD      NUMBER(10),
   CHARID2    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3315,7 +3315,7 @@ prompt
 prompt Creating table ALT_GHELD
 prompt ========================
 prompt
-create table system.ALT_GHELD
+create table calidus.ALT_GHELD
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -3330,7 +3330,7 @@ create table system.ALT_GHELD
   GHELD      NUMBER(10),
   CHARID2    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3346,7 +3346,7 @@ prompt
 prompt Creating table ALT_ITEM
 prompt =======================
 prompt
-create table system.ALT_ITEM
+create table calidus.ALT_ITEM
 (
   ACTCODE      VARCHAR2(10),
   WDATE        DATE,
@@ -3371,7 +3371,7 @@ create table system.ALT_ITEM
   EXPIREDATE   DATE,
   DESCR        VARCHAR2(64)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3387,7 +3387,7 @@ prompt
 prompt Creating table ALT_PLAY
 prompt =======================
 prompt
-create table system.ALT_PLAY
+create table calidus.ALT_PLAY
 (
   ACTCODE    VARCHAR2(10),
   WDATE      DATE,
@@ -3407,7 +3407,7 @@ create table system.ALT_PLAY
   DEADBYPC   NUMBER(10),
   DEADBYMON  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3423,12 +3423,12 @@ prompt
 prompt Creating table AMT_ACCOUNT
 prompt ==========================
 prompt
-create table system.AMT_ACCOUNT
+create table calidus.AMT_ACCOUNT
 (
   ACCOUNTID VARCHAR2(32),
   PASSWORD  VARCHAR2(8)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3439,8 +3439,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_ACCOUNTPK on system.AMT_ACCOUNT (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.AMT_ACCOUNTPK on calidus.AMT_ACCOUNT (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3455,7 +3455,7 @@ prompt
 prompt Creating table AMT_ACCOUNTLOG
 prompt =============================
 prompt
-create table system.AMT_ACCOUNTLOG
+create table calidus.AMT_ACCOUNTLOG
 (
   ACCOUNT_SEQID NUMBER(10) not null,
   ACCOUNT_ID    VARCHAR2(32) not null,
@@ -3464,7 +3464,7 @@ create table system.AMT_ACCOUNTLOG
   LOG_DATE      DATE not null,
   IP            VARCHAR2(23) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3475,8 +3475,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX on system.AMT_ACCOUNTLOG (ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX on calidus.AMT_ACCOUNTLOG (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3486,8 +3486,8 @@ create index system.AMT_ACCOUNTLOG_IX on system.AMT_ACCOUNTLOG (ACCOUNT_ID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX1 on system.AMT_ACCOUNTLOG (LOG_DATE, ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX1 on calidus.AMT_ACCOUNTLOG (LOG_DATE, ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3497,8 +3497,8 @@ create index system.AMT_ACCOUNTLOG_IX1 on system.AMT_ACCOUNTLOG (LOG_DATE, ACCOU
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_ACCOUNTLOG_IX2 on system.AMT_ACCOUNTLOG (LOG_TYPE)
-  tablespace SYSTEM
+create index calidus.AMT_ACCOUNTLOG_IX2 on calidus.AMT_ACCOUNTLOG (LOG_TYPE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3513,7 +3513,7 @@ prompt
 prompt Creating table AMT_MASTER
 prompt =========================
 prompt
-create table system.AMT_MASTER
+create table calidus.AMT_MASTER
 (
   ACCOUNTID      VARCHAR2(32) not null,
   EMAIL          VARCHAR2(128) not null,
@@ -3538,7 +3538,7 @@ create table system.AMT_MASTER
   LONEY_CHARGEYN CHAR(1),
   SEX            CHAR(1)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3549,8 +3549,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_IX on system.AMT_MASTER (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_IX on calidus.AMT_MASTER (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3560,8 +3560,8 @@ create unique index system.AMT_MASTER_IX on system.AMT_MASTER (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_MASTER_IX1 on system.AMT_MASTER (SOCIALNO)
-  tablespace SYSTEM
+create index calidus.AMT_MASTER_IX1 on calidus.AMT_MASTER (SOCIALNO)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3571,8 +3571,8 @@ create index system.AMT_MASTER_IX1 on system.AMT_MASTER (SOCIALNO)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_MASTER_IX2 on system.AMT_MASTER (EMAIL)
-  tablespace SYSTEM
+create index calidus.AMT_MASTER_IX2 on calidus.AMT_MASTER (EMAIL)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3587,7 +3587,7 @@ prompt
 prompt Creating table AMT_MASTER_OUT
 prompt =============================
 prompt
-create table system.AMT_MASTER_OUT
+create table calidus.AMT_MASTER_OUT
 (
   ACCOUNT_SEQID NUMBER(10) not null,
   ACCOUNT_ID    VARCHAR2(32) not null,
@@ -3613,7 +3613,7 @@ create table system.AMT_MASTER_OUT
   PENALTY_GBN   VARCHAR2(2),
   PAUSE_DATE    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3624,8 +3624,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX on system.AMT_MASTER_OUT (ACCOUNT_SEQID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX on calidus.AMT_MASTER_OUT (ACCOUNT_SEQID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3635,8 +3635,8 @@ create unique index system.AMT_MASTER_OUT_IX on system.AMT_MASTER_OUT (ACCOUNT_S
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX1 on system.AMT_MASTER_OUT (ACCOUNT_ID)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX1 on calidus.AMT_MASTER_OUT (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3646,8 +3646,8 @@ create unique index system.AMT_MASTER_OUT_IX1 on system.AMT_MASTER_OUT (ACCOUNT_
     minextents 1
     maxextents unlimited
   );
-create unique index system.AMT_MASTER_OUT_IX2 on system.AMT_MASTER_OUT (NICKNAME)
-  tablespace SYSTEM
+create unique index calidus.AMT_MASTER_OUT_IX2 on calidus.AMT_MASTER_OUT (NICKNAME)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3662,7 +3662,7 @@ prompt
 prompt Creating table AMT_WITHDRAW
 prompt ===========================
 prompt
-create table system.AMT_WITHDRAW
+create table calidus.AMT_WITHDRAW
 (
   ACCOUNT_SEQID   NUMBER(10) not null,
   ACCOUNT_ID      VARCHAR2(32) not null,
@@ -3675,7 +3675,7 @@ create table system.AMT_WITHDRAW
   REFUND_YN       CHAR(1),
   REFUND_COINAMT  NUMBER(22)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3686,8 +3686,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX on system.AMT_WITHDRAW (ACCOUNT_SEQID)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX on calidus.AMT_WITHDRAW (ACCOUNT_SEQID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3697,8 +3697,8 @@ create index system.AMT_WITHDRAW_IX on system.AMT_WITHDRAW (ACCOUNT_SEQID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX1 on system.AMT_WITHDRAW (ACCOUNT_ID)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX1 on calidus.AMT_WITHDRAW (ACCOUNT_ID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3708,8 +3708,8 @@ create index system.AMT_WITHDRAW_IX1 on system.AMT_WITHDRAW (ACCOUNT_ID)
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX2 on system.AMT_WITHDRAW (WITHDRAW_DATE, WITHDRAW_REASON)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX2 on calidus.AMT_WITHDRAW (WITHDRAW_DATE, WITHDRAW_REASON)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3719,8 +3719,8 @@ create index system.AMT_WITHDRAW_IX2 on system.AMT_WITHDRAW (WITHDRAW_DATE, WITH
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WITHDRAW_IX3 on system.AMT_WITHDRAW (WITHDRAW_TYPE)
-  tablespace SYSTEM
+create index calidus.AMT_WITHDRAW_IX3 on calidus.AMT_WITHDRAW (WITHDRAW_TYPE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3735,7 +3735,7 @@ prompt
 prompt Creating table AMT_WORLDMAPPING
 prompt ===============================
 prompt
-create table system.AMT_WORLDMAPPING
+create table calidus.AMT_WORLDMAPPING
 (
   ACCOUNTID    VARCHAR2(32) not null,
   SECTION      VARCHAR2(10) not null,
@@ -3743,7 +3743,7 @@ create table system.AMT_WORLDMAPPING
   CHARID       VARCHAR2(16) not null,
   CREATIONDATE DATE not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3754,8 +3754,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.AMT_WORLDMAPPING_IX on system.AMT_WORLDMAPPING (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.AMT_WORLDMAPPING_IX on calidus.AMT_WORLDMAPPING (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3770,7 +3770,7 @@ prompt
 prompt Creating table AMT_ZIPCODE
 prompt ==========================
 prompt
-create table system.AMT_ZIPCODE
+create table calidus.AMT_ZIPCODE
 (
   ZIP1  CHAR(3) not null,
   ZIP2  CHAR(3) not null,
@@ -3778,7 +3778,7 @@ create table system.AMT_ZIPCODE
   BUNJI VARCHAR2(100),
   SADDR VARCHAR2(40) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3794,7 +3794,7 @@ prompt
 prompt Creating table BAKCHARCASHITEM
 prompt ==============================
 prompt
-create table system.BAKCHARCASHITEM
+create table calidus.BAKCHARCASHITEM
 (
   ITEMSEQ    NUMBER(20),
   CHARSEQ    NUMBER(20),
@@ -3819,7 +3819,7 @@ create table system.BAKCHARCASHITEM
   REASON     VARCHAR2(32),
   DELTIME    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3830,8 +3830,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARCASHITEM_PK1 on system.BAKCHARCASHITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARCASHITEM_PK1 on calidus.BAKCHARCASHITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3841,8 +3841,8 @@ create unique index system.BAKCHARCASHITEM_PK1 on system.BAKCHARCASHITEM (ITEMSE
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARCASHITEM_PK2 on system.BAKCHARCASHITEM (CHARSEQ, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARCASHITEM_PK2 on calidus.BAKCHARCASHITEM (CHARSEQ, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3857,7 +3857,7 @@ prompt
 prompt Creating table BAKCHARDETAIL
 prompt ============================
 prompt
-create table system.BAKCHARDETAIL
+create table calidus.BAKCHARDETAIL
 (
   CHARSEQ        NUMBER(20),
   CHARID         VARCHAR2(32),
@@ -3888,7 +3888,7 @@ create table system.BAKCHARDETAIL
   FACE           NUMBER(10),
   DEADTYPE       NUMBER(3)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3899,8 +3899,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARDETAIL_IX1 on system.BAKCHARDETAIL (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARDETAIL_IX1 on calidus.BAKCHARDETAIL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3910,8 +3910,8 @@ create index system.BAKCHARDETAIL_IX1 on system.BAKCHARDETAIL (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARDETAIL_PK on system.BAKCHARDETAIL (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARDETAIL_PK on calidus.BAKCHARDETAIL (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3926,7 +3926,7 @@ prompt
 prompt Creating table BAKCHARITEM
 prompt ==========================
 prompt
-create table system.BAKCHARITEM
+create table calidus.BAKCHARITEM
 (
   ITEMSEQ    NUMBER(20),
   CHARSEQ    NUMBER(20),
@@ -3951,7 +3951,7 @@ create table system.BAKCHARITEM
   REASON     VARCHAR2(32),
   DELTIME    DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -3962,8 +3962,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARITEM_PK1 on system.BAKCHARITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARITEM_PK1 on calidus.BAKCHARITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3973,8 +3973,8 @@ create unique index system.BAKCHARITEM_PK1 on system.BAKCHARITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARITEM_PK2 on system.BAKCHARITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARITEM_PK2 on calidus.BAKCHARITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -3989,7 +3989,7 @@ prompt
 prompt Creating table BAKCHARMASTER
 prompt ============================
 prompt
-create table system.BAKCHARMASTER
+create table calidus.BAKCHARMASTER
 (
   CHARSEQ      NUMBER(20),
   CHARID       VARCHAR2(32),
@@ -4000,7 +4000,7 @@ create table system.BAKCHARMASTER
   CREATIONDATE DATE,
   DELETIONDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4011,8 +4011,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARMASTER_IX1 on system.BAKCHARMASTER (ACCOUNTID, CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARMASTER_IX1 on calidus.BAKCHARMASTER (ACCOUNTID, CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4022,8 +4022,8 @@ create index system.BAKCHARMASTER_IX1 on system.BAKCHARMASTER (ACCOUNTID, CHARID
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARMASTER_IX2 on system.BAKCHARMASTER (CREATIONDATE)
-  tablespace SYSTEM
+create index calidus.BAKCHARMASTER_IX2 on calidus.BAKCHARMASTER (CREATIONDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4033,8 +4033,8 @@ create index system.BAKCHARMASTER_IX2 on system.BAKCHARMASTER (CREATIONDATE)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARMASTER_PK on system.BAKCHARMASTER (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARMASTER_PK on calidus.BAKCHARMASTER (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4049,14 +4049,14 @@ prompt
 prompt Creating table BAKCHARSKILL
 prompt ===========================
 prompt
-create table system.BAKCHARSKILL
+create table calidus.BAKCHARSKILL
 (
   CHARSEQ  NUMBER(20),
   CHARID   VARCHAR2(32),
   SKILLSEQ VARCHAR2(512),
   PRODUCT  VARCHAR2(512)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4067,8 +4067,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKCHARSKILL_IX1 on system.BAKCHARSKILL (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKCHARSKILL_IX1 on calidus.BAKCHARSKILL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4078,8 +4078,8 @@ create index system.BAKCHARSKILL_IX1 on system.BAKCHARSKILL (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKCHARSKILL_PK on system.BAKCHARSKILL (CHARSEQ)
-  tablespace SYSTEM
+create unique index calidus.BAKCHARSKILL_PK on calidus.BAKCHARSKILL (CHARSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4094,7 +4094,7 @@ prompt
 prompt Creating table BAKSALESBOARD
 prompt ============================
 prompt
-create table system.BAKSALESBOARD
+create table calidus.BAKSALESBOARD
 (
   DOCID     NUMBER(20),
   CHARID    VARCHAR2(32),
@@ -4105,7 +4105,7 @@ create table system.BAKSALESBOARD
   ITEMTID   NUMBER(10),
   STATUS    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4116,8 +4116,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.BAKSALESBOARD_IX1 on system.BAKSALESBOARD (CHARID)
-  tablespace SYSTEM
+create index calidus.BAKSALESBOARD_IX1 on calidus.BAKSALESBOARD (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4127,8 +4127,8 @@ create index system.BAKSALESBOARD_IX1 on system.BAKSALESBOARD (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.BAKSALESBOARD_PK on system.BAKSALESBOARD (DOCID)
-  tablespace SYSTEM
+create unique index calidus.BAKSALESBOARD_PK on calidus.BAKSALESBOARD (DOCID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4143,7 +4143,7 @@ prompt
 prompt Creating table CASHITEMBUYLIST
 prompt ==============================
 prompt
-create table system.CASHITEMBUYLIST
+create table calidus.CASHITEMBUYLIST
 (
   BUYSEQ    NUMBER(20),
   ACCOUNTID VARCHAR2(32),
@@ -4160,7 +4160,7 @@ create table system.CASHITEMBUYLIST
   ORDERID   VARCHAR2(32),
   STATUS    VARCHAR2(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4171,8 +4171,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CASHITEMBUYLIST_IX1 on system.CASHITEMBUYLIST (BUYSEQ)
-  tablespace SYSTEM
+create unique index calidus.CASHITEMBUYLIST_IX1 on calidus.CASHITEMBUYLIST (BUYSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4182,8 +4182,8 @@ create unique index system.CASHITEMBUYLIST_IX1 on system.CASHITEMBUYLIST (BUYSEQ
     minextents 1
     maxextents unlimited
   );
-create unique index system.CASHITEMBUYLIST_IX2 on system.CASHITEMBUYLIST (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CASHITEMBUYLIST_IX2 on calidus.CASHITEMBUYLIST (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4193,8 +4193,8 @@ create unique index system.CASHITEMBUYLIST_IX2 on system.CASHITEMBUYLIST (ITEMSE
     minextents 1
     maxextents unlimited
   );
-create index system.CASHITEMBUYLIST_IX3 on system.CASHITEMBUYLIST (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CASHITEMBUYLIST_IX3 on calidus.CASHITEMBUYLIST (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4204,8 +4204,8 @@ create index system.CASHITEMBUYLIST_IX3 on system.CASHITEMBUYLIST (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.CASHITEMBUYLIST_IX4 on system.CASHITEMBUYLIST (CHARID)
-  tablespace SYSTEM
+create index calidus.CASHITEMBUYLIST_IX4 on calidus.CASHITEMBUYLIST (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4220,13 +4220,13 @@ prompt
 prompt Creating table CHARBUDDY
 prompt ========================
 prompt
-create table system.CHARBUDDY
+create table calidus.CHARBUDDY
 (
   CHARID  VARCHAR2(32),
   BUDDYID VARCHAR2(32),
   FLAG    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4237,8 +4237,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARBUDDY_IX1 on system.CHARBUDDY (CHARID)
-  tablespace SYSTEM
+create index calidus.CHARBUDDY_IX1 on calidus.CHARBUDDY (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4253,7 +4253,7 @@ prompt
 prompt Creating table CHARCASHITEM
 prompt ===========================
 prompt
-create table system.CHARCASHITEM
+create table calidus.CHARCASHITEM
 (
   ITEMSEQ    NUMBER(20),
   ACCOUNTID  VARCHAR2(32),
@@ -4275,7 +4275,7 @@ create table system.CHARCASHITEM
   REMAINTIME NUMBER(10),
   EXPIREDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4286,8 +4286,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CAHRCASHITEM_PK1 on system.CHARCASHITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CAHRCASHITEM_PK1 on calidus.CHARCASHITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4297,8 +4297,8 @@ create unique index system.CAHRCASHITEM_PK1 on system.CHARCASHITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARCASHITEM_IX1 on system.CHARCASHITEM (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARCASHITEM_IX1 on calidus.CHARCASHITEM (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4308,8 +4308,8 @@ create index system.CHARCASHITEM_IX1 on system.CHARCASHITEM (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARCASHITEM_PK2 on system.CHARCASHITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CHARCASHITEM_PK2 on calidus.CHARCASHITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4324,7 +4324,7 @@ prompt
 prompt Creating table CHARDETAIL
 prompt =========================
 prompt
-create table system.CHARDETAIL
+create table calidus.CHARDETAIL
 (
   CHARID         VARCHAR2(32),
   TITLE          VARCHAR2(32),
@@ -4354,7 +4354,7 @@ create table system.CHARDETAIL
   FACE           NUMBER(10),
   DEADTYPE       NUMBER(3)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4365,8 +4365,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARDETAIL_PK on system.CHARDETAIL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARDETAIL_PK on calidus.CHARDETAIL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4381,7 +4381,7 @@ prompt
 prompt Creating table CHARITEM
 prompt =======================
 prompt
-create table system.CHARITEM
+create table calidus.CHARITEM
 (
   ITEMSEQ    NUMBER(20),
   ACCOUNTID  VARCHAR2(32),
@@ -4403,7 +4403,7 @@ create table system.CHARITEM
   REMAINTIME NUMBER(10),
   EXPIREDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4414,8 +4414,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CAHRITEM_PK on system.CHARITEM (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.CAHRITEM_PK on calidus.CHARITEM (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4425,8 +4425,8 @@ create unique index system.CAHRITEM_PK on system.CHARITEM (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARITEM_IX1 on system.CHARITEM (CHARID, ITEMSEQ)
-  tablespace SYSTEM
+create index calidus.CHARITEM_IX1 on calidus.CHARITEM (CHARID, ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4436,8 +4436,8 @@ create index system.CHARITEM_IX1 on system.CHARITEM (CHARID, ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARITEM_IX2 on system.CHARITEM (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARITEM_IX2 on calidus.CHARITEM (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4452,7 +4452,7 @@ prompt
 prompt Creating table CHARMASTER
 prompt =========================
 prompt
-create table system.CHARMASTER
+create table calidus.CHARMASTER
 (
   CHARID       VARCHAR2(32),
   OLDCHARID    VARCHAR2(32),
@@ -4462,7 +4462,7 @@ create table system.CHARMASTER
   CHARTID      NUMBER(10),
   CREATIONDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4473,8 +4473,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX1 on system.CHARMASTER (ACCOUNTID)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX1 on calidus.CHARMASTER (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4484,8 +4484,8 @@ create index system.CHARMASTER_IX1 on system.CHARMASTER (ACCOUNTID)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX2 on system.CHARMASTER (CREATIONDATE)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX2 on calidus.CHARMASTER (CREATIONDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4495,8 +4495,8 @@ create index system.CHARMASTER_IX2 on system.CHARMASTER (CREATIONDATE)
     minextents 1
     maxextents unlimited
   );
-create index system.CHARMASTER_IX3 on system.CHARMASTER (OLDCHARID)
-  tablespace SYSTEM
+create index calidus.CHARMASTER_IX3 on calidus.CHARMASTER (OLDCHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4506,8 +4506,8 @@ create index system.CHARMASTER_IX3 on system.CHARMASTER (OLDCHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARMASTER_PK on system.CHARMASTER (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARMASTER_PK on calidus.CHARMASTER (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4522,7 +4522,7 @@ prompt
 prompt Creating table CHARQUEST
 prompt ========================
 prompt
-create table system.CHARQUEST
+create table calidus.CHARQUEST
 (
   CHARID   VARCHAR2(32),
   QUESTTID NUMBER(10),
@@ -4531,7 +4531,7 @@ create table system.CHARQUEST
   ARG2     NUMBER(10),
   NPCID    VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4542,8 +4542,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.CHARQUEST_IX1 on system.CHARQUEST (QUESTTID)
-  tablespace SYSTEM
+create index calidus.CHARQUEST_IX1 on calidus.CHARQUEST (QUESTTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4553,8 +4553,8 @@ create index system.CHARQUEST_IX1 on system.CHARQUEST (QUESTTID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARQUEST_PK on system.CHARQUEST (CHARID, QUESTTID)
-  tablespace SYSTEM
+create unique index calidus.CHARQUEST_PK on calidus.CHARQUEST (CHARID, QUESTTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4569,13 +4569,13 @@ prompt
 prompt Creating table CHARSKILL
 prompt ========================
 prompt
-create table system.CHARSKILL
+create table calidus.CHARSKILL
 (
   CHARID   VARCHAR2(32),
   SKILLSEQ VARCHAR2(512),
   PRODUCT  VARCHAR2(512)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4586,8 +4586,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.CHARSKILL_PK on system.CHARSKILL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.CHARSKILL_PK on calidus.CHARSKILL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4602,7 +4602,7 @@ prompt
 prompt Creating table GUILDBATTLEHIST
 prompt ==============================
 prompt
-create table system.GUILDBATTLEHIST
+create table calidus.GUILDBATTLEHIST
 (
   GUILDID        VARCHAR2(32),
   ENEMYGUILDID   VARCHAR2(32),
@@ -4612,7 +4612,7 @@ create table system.GUILDBATTLEHIST
   SCORE          NUMBER(10),
   ENEMYSCORE     NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4623,8 +4623,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.GUILDBATTLEHIST_IX1 on system.GUILDBATTLEHIST (GUILDID, BATTLESTDATE)
-  tablespace SYSTEM
+create index calidus.GUILDBATTLEHIST_IX1 on calidus.GUILDBATTLEHIST (GUILDID, BATTLESTDATE)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4639,7 +4639,7 @@ prompt
 prompt Creating table GUILDMASTER
 prompt ==========================
 prompt
-create table system.GUILDMASTER
+create table calidus.GUILDMASTER
 (
   GUILDID        VARCHAR2(32),
   GUILDTID       NUMBER(10),
@@ -4659,7 +4659,7 @@ create table system.GUILDMASTER
   MARKID         NUMBER(10),
   COLORID        NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4670,8 +4670,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.GUILDMASTER_PK on system.GUILDMASTER (GUILDID)
-  tablespace SYSTEM
+create unique index calidus.GUILDMASTER_PK on calidus.GUILDMASTER (GUILDID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4686,14 +4686,14 @@ prompt
 prompt Creating table GUILDMEMBER
 prompt ==========================
 prompt
-create table system.GUILDMEMBER
+create table calidus.GUILDMEMBER
 (
   CHARID     VARCHAR2(32),
   GUILDID    VARCHAR2(32),
   MEMBERRANK NUMBER(5),
   JOINDATE   DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4704,8 +4704,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.GUILDMEMBER_IX1 on system.GUILDMEMBER (GUILDID)
-  tablespace SYSTEM
+create index calidus.GUILDMEMBER_IX1 on calidus.GUILDMEMBER (GUILDID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4715,8 +4715,8 @@ create index system.GUILDMEMBER_IX1 on system.GUILDMEMBER (GUILDID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.GUILDMEMBER_PK on system.GUILDMEMBER (CHARID)
-  tablespace SYSTEM
+create unique index calidus.GUILDMEMBER_PK on calidus.GUILDMEMBER (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4731,7 +4731,7 @@ prompt
 prompt Creating table LOGINSTATUS
 prompt ==========================
 prompt
-create table system.LOGINSTATUS
+create table calidus.LOGINSTATUS
 (
   ACCOUNTID  VARCHAR2(20),
   STATUS     NUMBER(3),
@@ -4744,7 +4744,7 @@ create table system.LOGINSTATUS
   LASTCHARID VARCHAR2(16),
   ACCESSDATE DATE
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4755,8 +4755,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.LOGINSTATUS_PK on system.LOGINSTATUS (ACCOUNTID)
-  tablespace SYSTEM
+create unique index calidus.LOGINSTATUS_PK on calidus.LOGINSTATUS (ACCOUNTID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4771,7 +4771,7 @@ prompt
 prompt Creating table MAILBOX
 prompt ======================
 prompt
-create table system.MAILBOX
+create table calidus.MAILBOX
 (
   MAILSEQ    NUMBER(20),
   TOCHARID   VARCHAR2(32),
@@ -4784,7 +4784,7 @@ create table system.MAILBOX
   ITEMTID    NUMBER(10),
   ITEMQTY    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4795,8 +4795,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_IX1 on system.MAILBOX (TOCHARID, WDATE DESC)
-  tablespace SYSTEM
+create index calidus.MAILBOX_IX1 on calidus.MAILBOX (TOCHARID, WDATE DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4806,8 +4806,8 @@ create index system.MAILBOX_IX1 on system.MAILBOX (TOCHARID, WDATE DESC)
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_IX2 on system.MAILBOX (FROMCHARID, WDATE DESC)
-  tablespace SYSTEM
+create index calidus.MAILBOX_IX2 on calidus.MAILBOX (FROMCHARID, WDATE DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4817,8 +4817,8 @@ create index system.MAILBOX_IX2 on system.MAILBOX (FROMCHARID, WDATE DESC)
     minextents 1
     maxextents unlimited
   );
-create index system.MAILBOX_PK on system.MAILBOX (MAILSEQ)
-  tablespace SYSTEM
+create index calidus.MAILBOX_PK on calidus.MAILBOX (MAILSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -4833,7 +4833,7 @@ prompt
 prompt Creating table MD_GROUP_PRIVILEGES
 prompt ==================================
 prompt
-create table system.MD_GROUP_PRIVILEGES
+create table calidus.MD_GROUP_PRIVILEGES
 (
   ID                INTEGER not null,
   GROUP_ID_FK       INTEGER not null,
@@ -4844,7 +4844,7 @@ create table system.MD_GROUP_PRIVILEGES
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4860,7 +4860,7 @@ prompt
 prompt Creating table MD_MIGR_DEPENDENCY
 prompt =================================
 prompt
-create table system.MD_MIGR_DEPENDENCY
+create table calidus.MD_MIGR_DEPENDENCY
 (
   ID                 INTEGER not null,
   CONNECTION_ID_FK   INTEGER not null,
@@ -4874,7 +4874,7 @@ create table system.MD_MIGR_DEPENDENCY
   LAST_UPDATED_ON    DATE,
   LAST_UPDATED_BY    VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4890,7 +4890,7 @@ prompt
 prompt Creating table MD_MIGR_PARAMETER
 prompt ================================
 prompt
-create table system.MD_MIGR_PARAMETER
+create table calidus.MD_MIGR_PARAMETER
 (
   ID                INTEGER not null,
   CONNECTION_ID_FK  INTEGER not null,
@@ -4911,7 +4911,7 @@ create table system.MD_MIGR_PARAMETER
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4927,7 +4927,7 @@ prompt
 prompt Creating table MD_MIGR_WEAKDEP
 prompt ==============================
 prompt
-create table system.MD_MIGR_WEAKDEP
+create table calidus.MD_MIGR_WEAKDEP
 (
   ID                INTEGER not null,
   CONNECTION_ID_FK  INTEGER not null,
@@ -4942,7 +4942,7 @@ create table system.MD_MIGR_WEAKDEP
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4958,12 +4958,12 @@ prompt
 prompt Creating table MD_REGISTRY
 prompt ==========================
 prompt
-create table system.MD_REGISTRY
+create table calidus.MD_REGISTRY
 (
   OBJECT_TYPE VARCHAR2(30) not null,
   OBJECT_NAME VARCHAR2(30) not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -4979,7 +4979,7 @@ prompt
 prompt Creating table MD_USER_PRIVILEGES
 prompt =================================
 prompt
-create table system.MD_USER_PRIVILEGES
+create table calidus.MD_USER_PRIVILEGES
 (
   ID                INTEGER not null,
   USER_ID_FK        INTEGER not null,
@@ -4990,7 +4990,7 @@ create table system.MD_USER_PRIVILEGES
   LAST_UPDATED_ON   DATE,
   LAST_UDPATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5006,7 +5006,7 @@ prompt
 prompt Creating table MIGR_DATATYPE_TRANSFORM_MAP
 prompt ==========================================
 prompt
-create table system.MIGR_DATATYPE_TRANSFORM_MAP
+create table calidus.MIGR_DATATYPE_TRANSFORM_MAP
 (
   ID                INTEGER not null,
   PROJECT_ID_FK     INTEGER not null,
@@ -5017,7 +5017,7 @@ create table system.MIGR_DATATYPE_TRANSFORM_MAP
   LAST_UPDATED_ON   DATE,
   LAST_UPDATED_BY   VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5033,7 +5033,7 @@ prompt
 prompt Creating table MIGR_DATATYPE_TRANSFORM_RULE
 prompt ===========================================
 prompt
-create table system.MIGR_DATATYPE_TRANSFORM_RULE
+create table calidus.MIGR_DATATYPE_TRANSFORM_RULE
 (
   ID                    INTEGER not null,
   MAP_ID_FK             INTEGER not null,
@@ -5049,7 +5049,7 @@ create table system.MIGR_DATATYPE_TRANSFORM_RULE
   LAST_UPDATED_ON       DATE,
   LAST_UPDATED_BY       VARCHAR2(255)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5065,7 +5065,7 @@ prompt
 prompt Creating table MIGR_GENERATION_ORDER
 prompt ====================================
 prompt
-create table system.MIGR_GENERATION_ORDER
+create table calidus.MIGR_GENERATION_ORDER
 (
   ID               INTEGER not null,
   CONNECTION_ID_FK INTEGER not null,
@@ -5073,7 +5073,7 @@ create table system.MIGR_GENERATION_ORDER
   OBJECT_TYPE      VARCHAR2(4000) not null,
   GENERATION_ORDER INTEGER not null
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5089,7 +5089,7 @@ prompt
 prompt Creating table RPGWT
 prompt ====================
 prompt
-create table system.RPGWT
+create table calidus.RPGWT
 (
   SERVERID VARCHAR2(16),
   CHARTID  NUMBER(10),
@@ -5097,7 +5097,7 @@ create table system.RPGWT
   CURCONN  NUMBER(10),
   MAXCONN  NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5113,7 +5113,7 @@ prompt
 prompt Creating table SALESBOARD
 prompt =========================
 prompt
-create table system.SALESBOARD
+create table calidus.SALESBOARD
 (
   DOCID     NUMBER(20),
   CHARID    VARCHAR2(32),
@@ -5125,7 +5125,7 @@ create table system.SALESBOARD
   ITEMTID   NUMBER(10),
   STATUS    NUMBER(10)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5136,8 +5136,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOARD_IX1 on system.SALESBOARD (ITEMTID, DOCID DESC)
-  tablespace SYSTEM
+create index calidus.SALESBOARD_IX1 on calidus.SALESBOARD (ITEMTID, DOCID DESC)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5147,8 +5147,8 @@ create index system.SALESBOARD_IX1 on system.SALESBOARD (ITEMTID, DOCID DESC)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOARD_IX2 on system.SALESBOARD (ITEMSEQ)
-  tablespace SYSTEM
+create unique index calidus.SALESBOARD_IX2 on calidus.SALESBOARD (ITEMSEQ)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5158,8 +5158,8 @@ create unique index system.SALESBOARD_IX2 on system.SALESBOARD (ITEMSEQ)
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOARD_IX3 on system.SALESBOARD (CHARID)
-  tablespace SYSTEM
+create index calidus.SALESBOARD_IX3 on calidus.SALESBOARD (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5169,8 +5169,8 @@ create index system.SALESBOARD_IX3 on system.SALESBOARD (CHARID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOARD_PK on system.SALESBOARD (DOCID)
-  tablespace SYSTEM
+create unique index calidus.SALESBOARD_PK on calidus.SALESBOARD (DOCID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5185,7 +5185,7 @@ prompt
 prompt Creating table SALESBOUGHT
 prompt ==========================
 prompt
-create table system.SALESBOUGHT
+create table calidus.SALESBOUGHT
 (
   BUYID      NUMBER(20),
   DOCID      NUMBER(20),
@@ -5194,7 +5194,7 @@ create table system.SALESBOUGHT
   BUYDATE    DATE,
   BUYITEMSEQ NUMBER(20)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5205,8 +5205,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOUGHT_IX1 on system.SALESBOUGHT (DOCID, BUYID)
-  tablespace SYSTEM
+create index calidus.SALESBOUGHT_IX1 on calidus.SALESBOUGHT (DOCID, BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5216,8 +5216,8 @@ create index system.SALESBOUGHT_IX1 on system.SALESBOUGHT (DOCID, BUYID)
     minextents 1
     maxextents unlimited
   );
-create index system.SALESBOUGHT_IX2 on system.SALESBOUGHT (BUYCHARID, BUYID)
-  tablespace SYSTEM
+create index calidus.SALESBOUGHT_IX2 on calidus.SALESBOUGHT (BUYCHARID, BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5227,8 +5227,8 @@ create index system.SALESBOUGHT_IX2 on system.SALESBOUGHT (BUYCHARID, BUYID)
     minextents 1
     maxextents unlimited
   );
-create unique index system.SALESBOUGHT_PK on system.SALESBOUGHT (BUYID)
-  tablespace SYSTEM
+create unique index calidus.SALESBOUGHT_PK on calidus.SALESBOUGHT (BUYID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5243,7 +5243,7 @@ prompt
 prompt Creating table SERVERCONFIG
 prompt ===========================
 prompt
-create table system.SERVERCONFIG
+create table calidus.SERVERCONFIG
 (
   SECTION     VARCHAR2(10),
   MODULEDATA1 VARCHAR2(32),
@@ -5261,7 +5261,7 @@ create table system.SERVERCONFIG
   DBVENDER    VARCHAR2(32),
   EXTRA       VARCHAR2(1000)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5272,8 +5272,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.SERVERCONFIG_PK on system.SERVERCONFIG (SECTION)
-  tablespace SYSTEM
+create unique index calidus.SERVERCONFIG_PK on calidus.SERVERCONFIG (SECTION)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5288,12 +5288,12 @@ prompt
 prompt Creating table SERVERWORLD
 prompt ==========================
 prompt
-create table system.SERVERWORLD
+create table calidus.SERVERWORLD
 (
   SECTION VARCHAR2(10),
   WORLD   VARCHAR2(32)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5309,12 +5309,12 @@ prompt
 prompt Creating table WANTEDCRIMINAL
 prompt =============================
 prompt
-create table system.WANTEDCRIMINAL
+create table calidus.WANTEDCRIMINAL
 (
   CHARID VARCHAR2(16),
   BOUNTY NUMBER(20)
 )
-tablespace SYSTEM
+tablespace calidus
   pctfree 10
   pctused 40
   initrans 1
@@ -5325,8 +5325,8 @@ tablespace SYSTEM
     minextents 1
     maxextents unlimited
   );
-create unique index system.WANTEDCRIMINAL_PK on system.WANTEDCRIMINAL (CHARID)
-  tablespace SYSTEM
+create unique index calidus.WANTEDCRIMINAL_PK on calidus.WANTEDCRIMINAL (CHARID)
+  tablespace calidus
   pctfree 10
   initrans 2
   maxtrans 255
@@ -5341,7 +5341,7 @@ prompt
 prompt Creating sequence AMT_MASTER_SQ
 prompt ===============================
 prompt
-create sequence system.AMT_MASTER_SQ
+create sequence calidus.AMT_MASTER_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 1
@@ -5352,7 +5352,7 @@ prompt
 prompt Creating sequence BAKCHARMASTERSQ
 prompt =================================
 prompt
-create sequence system.BAKCHARMASTERSQ
+create sequence calidus.BAKCHARMASTERSQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 8431
@@ -5363,7 +5363,7 @@ prompt
 prompt Creating sequence MAILBOXSQ
 prompt ===========================
 prompt
-create sequence system.MAILBOXSQ
+create sequence calidus.MAILBOXSQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 15901
@@ -5374,7 +5374,7 @@ prompt
 prompt Creating sequence SALESBOARD_SQ
 prompt ===============================
 prompt
-create sequence system.SALESBOARD_SQ
+create sequence calidus.SALESBOARD_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 231081
@@ -5385,7 +5385,7 @@ prompt
 prompt Creating sequence SALESBOUGHT_SQ
 prompt ================================
 prompt
-create sequence system.SALESBOUGHT_SQ
+create sequence calidus.SALESBOUGHT_SQ
 minvalue 1
 maxvalue 999999999999999999999999999
 start with 1
@@ -5396,7 +5396,7 @@ prompt
 prompt Creating view V_ALT_ALL
 prompt =======================
 prompt
-CREATE OR REPLACE VIEW system.V_ALT_ALL AS
+CREATE OR REPLACE VIEW calidus.V_ALT_ALL AS
 SELECT
  ACTCODE, WDATE, IPADDR, ACCOUNTID, CHARID, CHARTID, CHARLV, CHAREXP, GHELDINVEN, GHELDBANK, /* COMMON */
  NULL AS ITEMSEQ, NULL AS ITEMTID , NULL AS ITEMQTY, NULL AS ITEMCONVHIST, NULL AS ITEMOPTION, NULL AS CHARID2,
@@ -5441,7 +5441,7 @@ prompt
 prompt Creating procedure SPDELETECHAR
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETECHAR(V_CHARID VARCHAR2, V_REASON VARCHAR2)
 AS
  V_BAKCHAR BAKCHARMASTER%ROWTYPE;
@@ -5546,7 +5546,7 @@ prompt
 prompt Creating procedure SPDELETEACCOUNT
 prompt ==================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEACCOUNT(V_ACCOUNTID VARCHAR2, V_REASON VARCHAR2, V_RESULT OUT VARCHAR2)
 AS
  V_CHARID VARCHAR2(32);
@@ -5584,7 +5584,7 @@ prompt
 prompt Creating procedure SPDELETECASHITEM
 prompt ===================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETECASHITEM(V_ITEMSEQ NUMBER, V_REASON VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -5612,7 +5612,7 @@ prompt
 prompt Creating procedure SPDELETEGUILD
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEGUILD(V_GUILDID VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -5642,7 +5642,7 @@ prompt
 prompt Creating procedure SPDELETEITEM
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPDELETEITEM(V_ITEMSEQ NUMBER, V_REASON VARCHAR2)
 AS
  V_ITEMSEQ_DUMMY  NUMBER;
@@ -5685,7 +5685,7 @@ prompt
 prompt Creating procedure SPMAILDELETE
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILDELETE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILDELETE(
  V_MAILSEQ NUMBER, V_FLAG NUMBER
  )
 AS
@@ -5703,7 +5703,7 @@ prompt
 prompt Creating procedure SPMAILITEMSAVE
 prompt =================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILITEMSAVE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILITEMSAVE(
  V_MAILSEQ NUMBER, V_ITEMSEQ NUMBER, V_ITEMTID NUMBER,
  V_ITEMQTY NUMBER, V_CHARID VARCHAR2, V_STATUS NUMBER,
  V_NEEDLEVEL OUT NUMBER, V_CONVERT OUT VARCHAR2, V_DURABILITY OUT NUMBER,
@@ -5809,7 +5809,7 @@ prompt
 prompt Creating procedure SPMAILWRITE
 prompt ==============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPMAILWRITE(
+CREATE OR REPLACE PROCEDURE calidus.SPMAILWRITE(
  V_TOCHARID VARCHAR2, V_FROMCHARID VARCHAR2, V_SUBJECT VARCHAR2,
  V_DATE VARCHAR2, V_FLAG NUMBER, V_ITEMTID NUMBER,
  V_ITEMQTY NUMBER, V_ITEMSEQ NUMBER, V_STATUS NUMBER,
@@ -5885,7 +5885,7 @@ prompt
 prompt Creating procedure SPRENAMECHAR
 prompt ===============================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRENAMECHAR(V_CHARID_OLD VARCHAR2, V_CHARID_NEW VARCHAR2, V_CODE OUT NUMBER)
 AS
  V_DUP   VARCHAR2(5);
@@ -5959,7 +5959,7 @@ prompt
 prompt Creating procedure SPRENAMEGUILD
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRENAMEGUILD(V_GUILDID VARCHAR2, V_OLDGUILDID VARCHAR2)
 AS
  E_MYEXCPT EXCEPTION;
@@ -5988,7 +5988,7 @@ prompt
 prompt Creating procedure SPRESTORECHAR
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.
+CREATE OR REPLACE PROCEDURE calidus.
  SPRESTORECHAR(V_CHARSEQ NUMBER, V_NEWCHARID VARCHAR2, V_RESULT OUT VARCHAR2)
 AS
  V_CHARIDDUMMY VARCHAR2(32);
@@ -6144,7 +6144,7 @@ prompt
 prompt Creating procedure SPSALESBUY
 prompt =============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESBUY(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESBUY(
  V_DOCID NUMBER, V_BUYER VARCHAR2, V_BUYERMONEY NUMBER, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_SELLER OUT VARCHAR2, V_PRICE OUT NUMBER,
  V_ITEMSEQ OUT NUMBER, V_ITEMTID OUT NUMBER, V_ITEMQTY OUT NUMBER,
@@ -6252,7 +6252,7 @@ prompt
 prompt Creating procedure SPSALESCANCEL
 prompt ================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESCANCEL(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESCANCEL(
  V_DOCID NUMBER, V_CHARID VARCHAR2, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_CODE OUT NUMBER
  )
@@ -6298,7 +6298,7 @@ prompt
 prompt Creating procedure SPSALESCONFIRM
 prompt =================================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESCONFIRM(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESCONFIRM(
  V_DOCID NUMBER, V_CHARID VARCHAR2, V_STATUSFROM NUMBER, V_STATUSTO NUMBER,
  V_CODE OUT NUMBER
  )
@@ -6344,7 +6344,7 @@ prompt
 prompt Creating procedure SPSALESSELL
 prompt ==============================
 prompt
-CREATE OR REPLACE PROCEDURE system.SPSALESSELL(
+CREATE OR REPLACE PROCEDURE calidus.SPSALESSELL(
  V_ITEMSEQ NUMBER, V_PRICE NUMBER, V_QUANTITY NUMBER,
  V_ITEMSTATUS NUMBER, V_BOARDSTATUS NUMBER, V_CHARID VARCHAR2,
  V_DOCID OUT NUMBER, V_DATESTR OUT VARCHAR2, V_CODE OUT NUMBER
