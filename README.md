@@ -84,8 +84,8 @@ For INST1_HTTP specify host for 127.0.0.1 ! In TNSNAMES.ORA also.   )
 
 Now edit the serverfiles connection configuration in CFG folder for DB.ini and DBSVRINFO.ini
 
-Changed INI/DatabaseInit/DB.ini (user: calidus, password is password, SID is account)
-Changed INI/DatabaseInit/DBSVRINFO.ini (user: calidus, password is password, SID is account)
+Changed CFG/DB/DB.ini (user: calidus, password is password, SID is account)
+Changed CFG/DB/DBSVRINFO.ini (user: calidus, password is password, SID is account)
 
 
 Now you will be able to start ArchSvrLogin,ArchSvrRelay,ArchSvrWorld.Wait 1 minute and server needs to be online.
