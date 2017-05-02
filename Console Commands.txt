@@ -1,0 +1,9 @@
+AlefLoginRepack commands:
+1. "info" -> set connectable account (0 or 88 -> 0 means all accounts and 88 only the vip or admin account need to be changed in db to work the acces of account)
+2. "acc" - > max user acces on server (from 1- 3700 maximum users on 1 server)
+
+AlefServerRepack commands:
+1."Reload" (reload the informations from database)
+
+AlefRelayServer commands:
+1."Agmp"  or "Memory" or "System" or "Admin"   -> will create a log with ApMemory Report

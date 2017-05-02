@@ -1,0 +1,3 @@
+Current Active Cell : 15, Spawned Character : 52, NumCharacter : 53 
+Current Active Cell : 32, Spawned Character : 87, NumCharacter : 88 
+Current Active Cell : 32, Spawned Character : 87, NumCharacter : 88 

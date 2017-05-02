@@ -1,0 +1,4 @@
+ProcessRemove() loop count is 0 (max is 0)
+lIsNotReady : 0
+lIsPostedCount : 0
+lIsTimeoutCount : 0
