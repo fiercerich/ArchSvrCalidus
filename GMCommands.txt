@@ -1,78 +1,39 @@
-<<<<<<< HEAD
-/levelup
+++++++++++++++++++++++++++++++++
+/levelup [number]
 /cool
-/come
-/go
-/move
+/come [username]
+/go [username]
+/move 
 /lame
 /quest
 /open
 /cokk
 /summons
 /ride
-/create
-/all
+/create [itemid]
+/all [message]
 /1234
 /help
-/shout
+/shout - in test
 /removespawnedmob
-/itemdropoff
-/itemdropon
-/buffeventstop
-/buffeventstart
-/expdropoff
-/expdropon
+/itemdropoff - in test
+/itemdropon - in test
+/buffeventstop - in test
+/buffeventstart - in test
+/expdropoff - in test
+/expdropon - in test
 /refreshmalllist
 /printlog
 /counsel
-/invisible
+/invisible [0 or 1]
 /endbuff
-/kick
+/kick [username]
 /intspawn
 /spawnmax
-/spawn
+/spawn [mobid or npcid]
 /packak
 /CHARACTEREDIT
-/notice
+/notice - in test
 /open
 /ride
-=======
-/levelup
-/cool
-/come
-/go
-/move
-/lame
-/quest
-/open
-/cokk
-/summons
-/ride
-/create
-/all
-/1234
-/help
-/shout
-/removespawnedmob
-/itemdropoff
-/itemdropon
-/buffeventstop
-/buffeventstart
-/expdropoff
-/expdropon
-/refreshmalllist
-/printlog
-/counsel
-/invisible
-/endbuff
-/kick
-/intspawn
-/spawnmax
-/spawn
-/packak
-/CHARACTEREDIT
-/notice
-/open
-/ride
->>>>>>> origin/master
-/ItemOperation
+++++++++++++++++++++++++++++++++
