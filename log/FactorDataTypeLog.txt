@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 StartLog..........
@@ -9,15 +8,3 @@ DataType3(Skill_UpdateFactorPercent) : 0
 DataType4(Skill_UpdateFactorResult) : 0
 DataType5(Skill_UpdateFactorItemPoint) : 0
 DataType6(Skill_UpdateFactorItemPercent) : 0
-=======
-
-
-StartLog..........
-DataType0(DefaultType) : 0
-DataType1(HistoryEntry) : 0
-DataType2(Skill_UpdateFactorPoint) : 0
-DataType3(Skill_UpdateFactorPercent) : 0
-DataType4(Skill_UpdateFactorResult) : 0
-DataType5(Skill_UpdateFactorItemPoint) : 0
-DataType6(Skill_UpdateFactorItemPercent) : 0
->>>>>>> origin/master
