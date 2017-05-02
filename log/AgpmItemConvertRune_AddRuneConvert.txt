@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 RuneAttributeType: 23, RuneAttributeValue: 10
 RuneAttributeType: 23, RuneAttributeValue: 10
 RuneAttributeType: 23, RuneAttributeValue: 10
@@ -15,3 +16,22 @@ RuneAttributeType: 23, RuneAttributeValue: 10
 RuneAttributeType: 23, RuneAttributeValue: 10
 RuneAttributeType: 2, RuneAttributeValue: 6
 RuneAttributeType: 2, RuneAttributeValue: 6
+=======
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 23, RuneAttributeValue: 10
+RuneAttributeType: 2, RuneAttributeValue: 6
+RuneAttributeType: 2, RuneAttributeValue: 6
+>>>>>>> origin/master
